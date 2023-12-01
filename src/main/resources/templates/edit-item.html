@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Item</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+</head>
+<body>
+
+<div class="container mt-4">
+    <h1>Edit Item</h1>
+    <form th:action="@{/list-items/{id}/edit(id=${item.id})}" th:object="${item}" method="post">
+        <div class="form-group">
+            <label for="name">Item Name:</label>
+            <input type="text" class="form-control" th:field="*{name}" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+            <label for="location">Location:</label>
+            <input type="text" class="form-control" th:field="*{location}" id="location" name="location" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Update Item</button>
+    </form>
+</div>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>
