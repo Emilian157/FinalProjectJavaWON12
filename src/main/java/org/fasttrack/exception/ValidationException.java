@@ -9,7 +9,6 @@ public class ValidationException extends RuntimeException {
         this.validationError = validationError;
     }
 
-    // Getters and setters
     public String getValidationError() {
         return validationError;
     }
