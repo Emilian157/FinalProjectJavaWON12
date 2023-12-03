@@ -1,7 +1,6 @@
 package org.fasttrack.exception;
 
 public class ValidationException extends RuntimeException {
-
     private String validationError;
 
     public ValidationException(String validationError) {
